@@ -37,29 +37,52 @@ function normalizeTeam(team: string) {
 }
 
 function getLogoTeam(team: string) {
-  switch (team) {
-    case '해태':
-      return '해태';
-    case '빙그레':
-      return '빙그레';
-    case '쌍방울':
-      return '쌍방울';
-    case 'SK':
-      return 'SK';
+  const normalized = String(team).trim();
+
+  switch (normalized) {
+    case '두산':
+      return 'doosan';
     case 'OB':
-      return 'OB';
-    case 'MBC':
-      return 'MBC';
+      return 'ob';
+    case '삼성':
+      return 'samsung';
+    case '한화':
+      return 'hanwha';
+    case '빙그레':
+      return 'binggrae';
+    case '롯데':
+      return 'lotte';
+    case 'KIA':
+    case '기아':
+      return 'kia';
+    case '해태':
+      return 'haitai';
+    case '키움':
+      return 'kiwoom';
     case '삼미':
-      return '삼미';
+      return 'sammi';
     case '청보':
-      return '청보';
+      return 'cheongbo';
     case '태평양':
-      return '태평양';
+      return 'taepyeongyang';
     case '현대':
-      return '현대';
+      return 'hyundai';
+    case 'SSG':
+      return 'ssg';
+    case 'SK':
+      return 'sk';
+    case '쌍방울':
+      return 'ssangbangwool';
+    case 'LG':
+      return 'lg';
+    case 'MBC':
+      return 'mbc';
+    case 'NC':
+      return 'nc';
+    case 'KT':
+      return 'kt';
     default:
-      return normalizeTeam(team);
+      return 'kia';
   }
 }
 
